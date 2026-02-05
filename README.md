@@ -1,4 +1,9 @@
-# Agricultural Data Analysis & Visualization in R
+<div align="center">
+  <h1 align="center">Agricultural Data Analysis & Visualization in R 🌶️</h1>
+  <br />
+</div>
+
+
 In this workshop, we'll be using agricultural data to learn R. There are two parts:
 - **Working With Data**: For complete beginners - a walkthrough of RStudio, setting up our environment, and learning foundational functions 
 - **Exploring & Visualizing Data:** For the adventurous beginner - walks through visualization in R (specifically `ggplot2`) + agg specific visuals
