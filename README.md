@@ -8,7 +8,7 @@ In this workshop, we'll be using agricultural data to learn R. There are two par
 - **Working With Data**: For complete beginners - a walkthrough of RStudio, setting up our environment, and learning foundational functions 
 - **Exploring & Visualizing Data:** For the adventurous beginner - walks through visualization in R (specifically `ggplot2`) + agg specific visuals
 
-Slides are available here
+Slides are available [here](https://github.com/lilynorthcutt/chile_workshop_feb2026/blob/main/Agricultural%20Data%20Analysis%20%26%20Visualization%20in%20R.pdf)
 
 Recording will be available after the workshop.
 
