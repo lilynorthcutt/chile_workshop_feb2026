@@ -31,6 +31,7 @@ oats <- yates.oats
 View(oats)  # Open in viewer
 head(oats)  # First 6 rows
 str(oats)   # Structure of the data
+glimpse(oats) 
 summary(oats)  # Summary statistics
 
 # ==============================================================================
@@ -43,28 +44,30 @@ oats$nitro
 # TODO: show typing it out (helpful auto-fill)
 
 ## BASIC STAT FUNCTIONS ##
-mean(oats$yield)
-median(oats$yield)
-min(oats$yield)
-sum(oats$yield)
-length(oats$yield) #counts total values
+# mean(oats$yield)
+# median(oats$yield)
+# min(oats$yield)
+# sum(oats$yield)
+# length(oats$yield) #counts total values
 
 # -->> STUDENT PROBLEM 1 
 
 ## FILTERING ##
 # Select only the "Golden Rain" variety
-golden_rain <- filter(oats, gen == "GoldenRain")
-# use unique to check
+#golden_rain <- filter(oats, gen == "GoldenRain")
+
 
 # Select only observations with high nitrogen (0.6)
 high_nitrogen <- filter(oats, nitro == 0.6)
 
 # Multiple conditions - Golden Rain AND high nitrogen
-golden_high_n <- filter(oats, 
-                        gen == "GoldenRain" & nitro == 0.6)
+# golden_high_n <- filter(oats, 
+#                         gen == "GoldenRain" & nitro == 0.6)
 
 # How many rows? Should be much fewer!
+nrow(oats)
 nrow(golden_high_n)
+
 
 # Important operators:
 # ==  equals
@@ -82,8 +85,8 @@ nrow(golden_high_n)
 ## CREATING NEW COLUMNS WITH MUTATE ##
 # Create a new variable for yield in total lbs, not in 1/4lbs
 # Original yield is in 1/4lbs (i.e. he multiplied the original weight by 4)
-oats <- mutate(oats, 
-               yield_total_lbs = yield / 4)
+# oats <- mutate(oats, 
+#                yield_total_lbs = yield / 4)
 
 # Categorize Nitrogen as Above or Below Average 
 oats <- mutate(oats, 
@@ -116,20 +119,20 @@ oats
 # SECTION D: SUMMARIZING DATA
 # ==============================================================================
 ## SIMPLE SUMMARY ##
-summarize(oats,
-          mean_yield = mean(yield),
-          max_yield = max(yield),
-          min_yield = min(yield)
-          )
+# summarize(oats,
+#           mean_yield = mean(yield),
+#           max_yield = max(yield),
+#           min_yield = min(yield)
+#           )
 
 ## SUMMARY + GROUPING ##
-group_by(oats, gen)
-
-summarize(group_by(oats, gen),
-          mean_yield = mean(yield),
-          max_yield = max(yield),
-          min_yield = min(yield)
-)
+# group_by(oats, gen)
+# 
+# summarize(group_by(oats, gen),
+#           mean_yield = mean(yield),
+#           max_yield = max(yield),
+#           min_yield = min(yield)
+# )
 
 summarize(group_by(oats, gen, nitro),
           mean_yield = mean(yield),

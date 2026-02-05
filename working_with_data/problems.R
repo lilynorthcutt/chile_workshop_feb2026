@@ -73,13 +73,10 @@ high_straw_or_grain_plots <-
 # PROBLEM 3: CREATING NEW VARIABLES
 ################################################################################
 # YOUR TURN - Part A:
-# Create a new variable called "high_yield" that is:
-# 'Yes' if yield >= average yield
-#- 'No' if yield < average yield
-# hint: use case_when()
+# Create a grain_to_straw_ratio column
 oats <- mutate(oats,
-               high_yield = 
-               )
+               grain_to_straw_ratio = 
+)
 
 # YOUR TURN - Part B:
 # Create a column called percent_diff_from_avg_yield that calculates the 
@@ -91,21 +88,15 @@ oats <- mutate(oats,
 )
 
 # YOUR TURN - Part C:
-# Create a grain_to_straw_ratio column
+# Create a new variable called "high_yield" that is:
+# 'Yes' if yield >= average yield
+#- 'No' if yield < average yield
+# hint: use case_when()
 oats <- mutate(oats,
-               grain_to_straw_ratio = 
+               high_yield = case_when(
+                 
+               )
 )
-
-
-# YOUR TURN - Part D (challenge):
-# If we run
-unique(oats$nitro)
-# we see that there were 4 amounts of nitrogen treatment:
-# none (0), 0.2, 0.4, and 0.6
-# Create a column diff_in_yield_given_nitro_yield_avg, where we calculate the 
-# difference between 'yield' and 
-# 'avg yield FOR that specific nitrogen treatement group'
-
 
 
 ################################################################################
@@ -133,16 +124,19 @@ oats <-
 # PROBLEM 5: SUMMARIZING DATA BY GROUPS
 ################################################################################
 # YOUR TURN - Part A:
-# Summarize the avg yield, grain, and straw by block
+# Summarize the avg yield by block
 block_summary <-
   
 # YOUR TURN - Part B:
 # For control oats only, what are the avg min and max avg yield for each variety?
+# Filter to control yields
 control_yields_by_variety <- 
-  
+
+# Summarize
+control_min_max_variety <-
 
 ################################################################################
-# BONUS CHALLENGE: PUTTING IT ALL TOGETHER
+# BONUS CHALLENGE
 ################################################################################
 # Question 1:
 # Which nitrogen treatment yielded the highest averages for each 

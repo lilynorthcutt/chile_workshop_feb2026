@@ -38,7 +38,7 @@ oats_w_total_yield_avg_control <-
 # 5. Summarizes to get mean yield and count for each group
 high_nitrogen_comparison <- 
   
-# YOUR TURN - Part B:
+# YOUR TURN - Part D:
 # Create a workflow that calculates how much each plot deviates from
 # its variety's mean yield. Steps:
 # 1. Start with oats
@@ -50,16 +50,16 @@ high_nitrogen_comparison <-
 yield_deviations <- 
 
   
-# YOUR TURN - Part C (Challenge):
+# YOUR TURN - Part E (Challenge):
 # Create  a workflow that adds a column for the avg yields per block, the 
-# average yields per variety, and per nitrogen treatment
+# average yields per variety, and the average per nitrogen treatment
+# hint: use multiple instances of groups + don't forget ungrouping!
 avgs_per_many_groups <- 
 
   
 ################################################################################
 # PROBLEM 2: BUILDING GGPLOT2 SCATTER PLOTS
 ################################################################################
-
 # 1. Summarize ChickWeight to get the average weight by diet and time
 chick_summary <- 
 
@@ -91,4 +91,19 @@ chick_summary <-
 # Task: Please create a boxplot with:
 # x-axis as Time, y-axis as weight, color as Diet
 # facet on starting weight being above and below avg 
-#(hint: use mutate to create this column)
+# (hint: use mutate to create this column)
+
+
+
+
+
+
+
+
+
+
+
+#################################################################################
+# CONGRATULATIONS! 
+# You've completed Part 2 - Exploring & Visualizing Data in R <3
+################################################################################

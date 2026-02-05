@@ -104,7 +104,8 @@ summary(ChickWeight)
 ### BUILDING A SCATTER PLOT ITERATIVELY ###
 
 # ITERATION 1: Most basic scatter plot
-plot1 <- ggplot(ChickWeight, aes(x = Time, y = weight)) + geom_point()
+plot1 <- ggplot(ChickWeight, aes(x = Time, y = weight)) + 
+  geom_point()
 plot1
 
 
@@ -115,8 +116,9 @@ plot2 <- ggplot(ChickWeight, aes(x = Time, y = weight)) +
       title = "Chick Growth Over Time",
       x = "Time (days)",
       y = "Weight (grams)")
-
 plot2
+
+# plot1 + what makes plot2?
 
 # ITERATION 3: Color by Diet
 plot3 <- ggplot(ChickWeight, aes(x = Time, y = weight, color = Diet)) +
@@ -131,7 +133,7 @@ plot3 <- ggplot(ChickWeight, aes(x = Time, y = weight, color = Diet)) +
 plot3
 
 # ITERATION 4: Add vertical line at midpoint
-midpoint <- (max(chick_summary$Time) + min(chick_summary$Time)) / 2
+midpoint <- (max(ChickWeight$Time) + min(ChickWeight$Time)) / 2
 plot4 <- ggplot(ChickWeight, aes(x = Time, y = weight, color = Diet)) +
   geom_point() +
   geom_vline(xintercept = midpoint, linetype = "dashed", color = "gray55", size = 1) +
